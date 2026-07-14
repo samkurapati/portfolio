@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alexrivera.dev/</loc>
+    <loc>https://samkurapati.github.io/portfolio/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alexrivera.dev/#about</loc>
+    <loc>https://samkurapati.github.io/portfolio/#about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alexrivera.dev/#projects</loc>
+    <loc>https://samkurapati.github.io/portfolio/#projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alexrivera.dev/#contact</loc>
+    <loc>https://samkurapati.github.io/portfolio/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
