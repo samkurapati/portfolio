@@ -302,7 +302,7 @@
       <h2 class="section-title">Let's <span class="gradient">Connect</span></h2>
       <div class="contact-grid">
         <div>
-          <form id="contactForm" action="https://formsubmit.co/ajax/dumaskurapati@gmail.com" method="POST">
+          <form id="contactForm" action="https://formsubmit.co/dumaskurapati@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New portfolio contact submission">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
@@ -409,28 +409,21 @@
         }
 
         try {
-          const response = await fetch(contactForm.action, {
+          await fetch(contactForm.action, {
             method: 'POST',
-            body: new FormData(contactForm),
-            headers: {
-              Accept: 'application/json'
-            }
+            mode: 'no-cors',
+            body: new FormData(contactForm)
           });
-
-          const data = await response.json().catch(() => null);
-          if (!response.ok || !data || data.success !== true) {
-            throw new Error((data && data.message) || 'Mail delivery failed.');
-          }
 
           contactForm.reset();
           replyToField.value = '';
           if (contactStatus) {
-            contactStatus.textContent = 'Message sent successfully.';
+            contactStatus.textContent = 'Message sent successfully. I will reply soon.';
             contactStatus.style.color = '#4CAF50';
           }
         } catch (error) {
           if (contactStatus) {
-            contactStatus.textContent = 'Could not send the message. Please email dumaskurapati@gmail.com directly.';
+            contactStatus.textContent = 'Could not send the message right now. Please email dumaskurapati@gmail.com directly.';
             contactStatus.style.color = '#F87171';
           }
         } finally {
