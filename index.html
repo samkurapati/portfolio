@@ -303,9 +303,22 @@
       <div class="contact-grid">
         <div>
           <form id="contactForm" action="https://formsubmit.co/el/jekiku" method="POST">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="you@email.com" required>
-            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary);">Name</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary);">Email</label>
+              <input type="email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary);">Phone</label>
+              <input type="text" name="phone" placeholder="+91 9009009000">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary);">Message</label>
+              <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
             <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
           </form>
         </div>

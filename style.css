@@ -445,8 +445,6 @@ nav {
   border-radius: 0 0 4px 4px;
 }
 
-}
-
 .hero-badge {
   display: inline-block;
   background: rgba(45, 125, 70, 0.08);
@@ -929,6 +927,43 @@ section {
 .form-group textarea {
   min-height: 140px;
   resize: vertical;
+}
+
+/* Form inputs without form-group wrapper */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-light);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: block;
+  box-sizing: border-box;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: var(--text-muted);
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(45, 125, 70, 0.08);
+}
+
+#contactForm textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#contactForm button {
+  margin-top: 10px;
 }
 
 .social-icons {
