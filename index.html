@@ -21,7 +21,7 @@
   <meta property="og:description" content="Crafting intelligent digital experiences with AI, Python, PHP, and modern design.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samkurapati.github.io/portfolio/">
-  <meta property="og:image" content="https://samkurapati.github.io/portfolio/assets/og-image.jpg">
+  <meta property="og:image" content="https://samkurapati.github.io/portfolio/og-image.jpg">
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dumas Sam K · GenAi Developer">
@@ -202,9 +202,9 @@
   <section id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image">
+        <div class="about-image-wrap">
           <!-- <div class="avatar">🧑‍💻</div> -->
-           <div ><img class="about-image" src="assets/Profile_pic.jpg" alt="AI Developer Workspace"></div>
+           <div><img class="about-image" src="Profile_pic.jpg" alt="AI Developer Workspace"></div>
 
           <h3 style="margin-top:12px;">Dumas Sam Kurapati</h3>
           <p style="color:var(--text-muted);">GenAi Developer</p>
@@ -261,9 +261,9 @@
       <span class="hero-badge">Portfolio</span>
       <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
       <div class="project-grid">
-        <div class="project-card"><a href="https://wagzentechnology.com" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;"><div class="thumb"><img src="assets/Business-Website.jpg" alt="Business Website"></div><div class="body"><h4>Business-Website</h4><p>OpenAI-powered chatbot with memory.</p><div class="project-tags"><span>AI</span><span>Python</span><span>PHP</span></div></div></a></div>
-        <div class="project-card"><a href="https://freyza.in/" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;"><div class="thumb"><img src="assets/Salone-Website.jpg" alt="Salone Website"></div><div class="body"><h4>Salone-Website</h4><p>Real-time data viz with PHP &amp; Chart.js.</p><div class="project-tags"><span>PHP</span><span>JS</span><span>MySQL</span></div></div></a></div>
-        <div class="project-card"><div class="thumb"><img src="assets/Portfolio.jpg" alt="Portfolio Website"></div><div class="body"><h4>Portfolio-Website</h4><p>Figma components &amp; UI kit for SaaS.</p><div class="project-tags"><span>Design</span><span>Figma</span></div></div></div>
+        <div class="project-card"><a href="https://wagzentechnology.com" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;"><div class="thumb"><img src="Business-Website.jpg" alt="Business Website"></div><div class="body"><h4>Business-Website</h4><p>OpenAI-powered chatbot with memory.</p><div class="project-tags"><span>AI</span><span>Python</span><span>PHP</span></div></div></a></div>
+        <div class="project-card"><a href="https://freyza.in/" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;"><div class="thumb"><img src="Salone-Website.jpg" alt="Salone Website"></div><div class="body"><h4>Salone-Website</h4><p>Real-time data viz with PHP &amp; Chart.js.</p><div class="project-tags"><span>PHP</span><span>JS</span><span>MySQL</span></div></div></a></div>
+        <div class="project-card"><div class="thumb"><img src="Portfolio.jpg" alt="Portfolio Website"></div><div class="body"><h4>Portfolio-Website</h4><p>Figma components &amp; UI kit for SaaS.</p><div class="project-tags"><span>Design</span><span>Figma</span></div></div></div>
       </div>
     </div>
   </section>
@@ -302,7 +302,11 @@
       <h2 class="section-title">Let's <span class="gradient">Connect</span></h2>
       <div class="contact-grid">
         <div>
-          <form id="contactForm" action="https://formsubmit.co/el/jekiku" method="POST">
+          <form id="contactForm" action="https://formsubmit.co/ajax/dumaskurapati@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New portfolio contact submission">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_replyto" id="replyToField" value="">
             <div style="margin-bottom: 20px;">
               <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary);">Name</label>
               <input type="text" name="name" placeholder="Your name" required>
@@ -320,6 +324,7 @@
               <textarea name="message" placeholder="Tell me about your project..." required></textarea>
             </div>
             <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+            <p id="contactStatus" style="margin-top:12px;color:var(--text-muted);min-height:1.5em;"></p>
           </form>
         </div>
         <div>
@@ -327,13 +332,13 @@
           <p style="color:var(--text-muted);">📧 dumaskurapati@gmail.com<br>📞 +91 7013369523</p>
           <div class="social-icons">
   <a href="https://www.linkedin.com/in/dumas-sam-kurapati" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-    <img src="assets/linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
+    <img src="linkedin-icon.svg" alt="LinkedIn" width="24" height="24">
   </a>
   <a href="https://dumas-sam-kurapati-the-creator.my.canva.site/" target="_blank" aria-label="Canva">
-    <img src="assets/canva-icon.svg" alt="Canva" width="24" height="24">
+    <img src="canva-icon.svg" alt="Canva" width="24" height="24">
   </a>
   <a href="https://www.instagram.com/your-handle" target="_blank" aria-label="Instagram">
-    <img src="assets/instagram-icon.svg" alt="Instagram" width="24" height="24">
+    <img src="instagram-icon.svg" alt="Instagram" width="24" height="24">
   </a>
   <a href="#" aria-label="Chat">💬</a>
 </div>
@@ -370,10 +375,6 @@
       backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
 
-    // ===== FORM FEEDBACK / EMAIL SENDING =====
-    // FormSubmit.co handles the form submission automatically
-
-
     // ===== SMOOTH SCROLL (nav) =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -384,6 +385,62 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // ===== FORM EMAIL REPLY-TO =====
+    const contactForm = document.getElementById('contactForm');
+    const replyToField = document.getElementById('replyToField');
+    const contactStatus = document.getElementById('contactStatus');
+    if (contactForm && replyToField) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const emailInput = contactForm.querySelector('input[name="email"]');
+        replyToField.value = emailInput ? emailInput.value.trim() : '';
+
+        const previousButtonText = submitButton ? submitButton.textContent : '';
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Sending...';
+        }
+        if (contactStatus) {
+          contactStatus.textContent = 'Sending your message...';
+          contactStatus.style.color = 'var(--text-muted)';
+        }
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: {
+              Accept: 'application/json'
+            }
+          });
+
+          const data = await response.json().catch(() => null);
+          if (!response.ok || !data || data.success !== true) {
+            throw new Error((data && data.message) || 'Mail delivery failed.');
+          }
+
+          contactForm.reset();
+          replyToField.value = '';
+          if (contactStatus) {
+            contactStatus.textContent = 'Message sent successfully.';
+            contactStatus.style.color = '#4CAF50';
+          }
+        } catch (error) {
+          if (contactStatus) {
+            contactStatus.textContent = 'Could not send the message. Please email dumaskurapati@gmail.com directly.';
+            contactStatus.style.color = '#F87171';
+          }
+        } finally {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = previousButtonText;
+          }
+        }
+      });
+    }
 
     // ===== COUNTER ANIMATION (stats) =====
     const stats = document.querySelectorAll('.stat-item .number');
