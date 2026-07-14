@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samkurapati.github.io/portfolio/sitemap.xml
