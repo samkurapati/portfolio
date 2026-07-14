@@ -305,7 +305,7 @@
           <form id="contactForm" action="https://formsubmit.co/dumaskurapati@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New portfolio contact submission">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://samkurapati.github.io/portfolio/#contact">
             <input type="hidden" name="_replyto" id="replyToField" value="">
             <div style="margin-bottom: 20px;">
               <label style="display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-primary);">Name</label>
@@ -324,7 +324,6 @@
               <textarea name="message" placeholder="Tell me about your project..." required></textarea>
             </div>
             <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
-            <p id="contactStatus" style="margin-top:12px;color:var(--text-muted);min-height:1.5em;"></p>
           </form>
         </div>
         <div>
@@ -389,49 +388,10 @@
     // ===== FORM EMAIL REPLY-TO =====
     const contactForm = document.getElementById('contactForm');
     const replyToField = document.getElementById('replyToField');
-    const contactStatus = document.getElementById('contactStatus');
     if (contactForm && replyToField) {
-      contactForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const submitButton = contactForm.querySelector('button[type="submit"]');
+      contactForm.addEventListener('submit', () => {
         const emailInput = contactForm.querySelector('input[name="email"]');
         replyToField.value = emailInput ? emailInput.value.trim() : '';
-
-        const previousButtonText = submitButton ? submitButton.textContent : '';
-        if (submitButton) {
-          submitButton.disabled = true;
-          submitButton.textContent = 'Sending...';
-        }
-        if (contactStatus) {
-          contactStatus.textContent = 'Sending your message...';
-          contactStatus.style.color = 'var(--text-muted)';
-        }
-
-        try {
-          await fetch(contactForm.action, {
-            method: 'POST',
-            mode: 'no-cors',
-            body: new FormData(contactForm)
-          });
-
-          contactForm.reset();
-          replyToField.value = '';
-          if (contactStatus) {
-            contactStatus.textContent = 'Message sent successfully. I will reply soon.';
-            contactStatus.style.color = '#4CAF50';
-          }
-        } catch (error) {
-          if (contactStatus) {
-            contactStatus.textContent = 'Could not send the message right now. Please email dumaskurapati@gmail.com directly.';
-            contactStatus.style.color = '#F87171';
-          }
-        } finally {
-          if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.textContent = previousButtonText;
-          }
-        }
       });
     }
 
